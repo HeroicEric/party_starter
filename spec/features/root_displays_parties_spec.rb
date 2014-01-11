@@ -24,7 +24,7 @@ feature 'guests can view parties on homepage', %Q{
   	event = FactoryGirl.create(:event)
   	visit event_path(event)
   	expect(page).to have_content(event.title)
-  	expect(page).to have_content(event.location)
+  	expect(page).to have_content(event.location.name)
   	expect(page).to have_content(event.when)
   	expect(page).to have_content(event.rsvp_min)
   	click_link 'rsvp'
