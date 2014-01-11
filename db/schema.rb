@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20140111184105) do
     t.string   "title",                                       null: false
     t.integer  "location_id"
     t.string   "theme",                                       null: false
-    t.datetime "when",        default: '2014-01-12 18:53:49', null: false
+    t.datetime "when",        default: '2014-01-12 20:58:41', null: false
     t.integer  "rsvp_min",                                    null: false
     t.integer  "rsvp_max"
     t.text     "description"
