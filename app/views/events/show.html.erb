@@ -1,0 +1,8 @@
+<h1>
+<%= @event.title %>
+</h1>
+<p>
+Where: <%= @event.location.name %>
+When: <%= @event.when %>
+<%= link_to 'rsvp', new_rsvp_path %>
+</p>
