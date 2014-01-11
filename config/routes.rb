@@ -6,6 +6,7 @@ PartyStarter::Application.routes.draw do
    root 'pages#home'
    resources :events
    resources :rsvps
+   resources :locations
 
 
   # Example of regular route:

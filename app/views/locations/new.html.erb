@@ -1,0 +1,9 @@
+<h1>Add a location</h1>
+<%= simple_form_for @location do |f| %>
+	<%= f.input :name, label: false, placeholder: 'Name' %>
+	<%= f.input :street_address, label: false, placeholder: 'Street Address' %>
+	<%= f.input :city, label: false, placeholder: 'City' %>
+	<%= f.input :state,label: false, placeholder: 'State', as: :select, collection:us_states %>
+	<%= f.input :zip_code, label: false, placeholder: 'Zip Code' %>
+	<%= f.submit %>
+<% end %>

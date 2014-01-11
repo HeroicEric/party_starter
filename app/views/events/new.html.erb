@@ -2,6 +2,7 @@
 <%= simple_form_for @event do |f| %>
 	<%= f.input :title, label: false, placeholder: 'Title' %>
 	<%= f.association :location, label: false, placeholder: 'Location' %>
+	<%= link_to 'Add new location', new_location_path %>
 	<%= f.input :theme, label: false, placeholder: 'Theme' %>
 	<%= f.input :when, label: false, placeholder: 'When'%>
 	<%= f.input :rsvp_min, label: false, placeholder: 'Min RSVPs'%>
