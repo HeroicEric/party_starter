@@ -12,8 +12,10 @@ feature 'guests can view parties on homepage', %Q{
   # *Users can view individual parties
 
   scenario 'user rsvps for parties' do
+  	event = FactoryGirl.create(:event)
+  	event.save
   	visit root_path
-  	expect(page).to have_content('parties')
+  	expect(page).to have_content(event.title)
   	click_link 'rsvp'
   	expect(page).to have_content('successfully rsvp\'ed')
   end

@@ -12,18 +12,19 @@ feature 'users can make events', %Q{
   # *it raises an error
 
   scenario 'user creates a party with valid info' do
+  	location = FactoryGirl.create(:location)
   	visit root_path
-  	click_link 'Start Party'
+  	click_link 'Start a Party'
   	fill_in'Title', with: 'Eighties Night at Launch Academy'
-  	fill_in'Location', with: 'Mission Control'
+  	select location.name, from: 'Location'
   	fill_in'Theme', with: 'Neon leg warmers'
-  	fill_in'RSVPs Required', with:'10'
+  	fill_in'Min RSVPs', with:'10'
   	click_button 'Create Event'
   	expect(page).to have_content('Event was successfully added.')
   end
   scenario 'user enters invalid information' do
   	visit root_path
-  	click_link 'Start Party'
+  	click_link 'Start a Party'
   	click_button 'Create Event'
   	expect(page).to have_content("can't be blank")
   end

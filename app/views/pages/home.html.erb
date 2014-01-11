@@ -1,0 +1,14 @@
+<h1>Party Starter</h1>
+<p>
+<%= link_to "Start a Party", new_event_path %>
+</p>
+<h2>Parties</h2>
+
+<% unless @events.blank? %>
+	<% @events.each do |event| %>
+		<p>
+		<%= event.title %>
+		<%= link_to 'rsvp', new_rsvp_path %>
+		</p>
+	<% end %>
+<% end %>

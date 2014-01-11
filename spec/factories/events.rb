@@ -3,7 +3,7 @@
 FactoryGirl.define do
   factory :event do
     title "MyString"
-    location "MyString"
+    association :location 
     theme "MyString"
     rsvp_min 1
     rsvp_max 1
