@@ -9,6 +9,7 @@ gem "jquery-rails"
 gem "turbolinks"
 gem "jbuilder", "~> 1.2"
 gem "simple_form"
+gem 'omniauth-facebook'
 group :doc do
   gem "sdoc", require: false
 end
@@ -24,4 +25,6 @@ group :development, :test do
   gem "valid_attribute"
   gem "capybara"
   gem "quiet_assets"
+  gem "launchy"
+  gem "dotenv-rails"
 end

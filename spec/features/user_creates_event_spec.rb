@@ -26,6 +26,6 @@ feature 'users can make events', %Q{
   	visit root_path
   	click_link 'Start a Party'
   	click_button 'Create Event'
-  	expect(page).to have_content("can't be blank")
+  	expect(page).to have_content("Something went wrong!")
   end
 end

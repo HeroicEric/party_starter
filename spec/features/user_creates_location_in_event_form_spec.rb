@@ -27,6 +27,8 @@ feature 'users can create locations from event form', %Q{
   scenario 'user inputs invalid location info' do
   	visit new_location_path
   	click_button("Create Location")
-  	expect(page).to have_content("can't be blank")
+
+  	expect(page).to have_content("Something went wrong!")
+  	
   end
 end

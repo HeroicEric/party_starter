@@ -13,10 +13,10 @@ feature 'guests can view parties on homepage', %Q{
 
   scenario 'user rsvps for parties' do
   	event = FactoryGirl.create(:event)
-  	event.save
+    user = FactoryGirl.create(:user)
   	visit root_path
   	expect(page).to have_content(event.title)
-  	click_link 'rsvp'
+  	click_button 'rsvp'
   	expect(page).to have_content('successfully rsvp\'ed')
   end
 
@@ -27,7 +27,7 @@ feature 'guests can view parties on homepage', %Q{
   	expect(page).to have_content(event.location.name)
   	expect(page).to have_content(event.when)
   	expect(page).to have_content(event.rsvp_min)
-  	click_link 'rsvp'
+  	click_button 'rsvp'
   	expect(page).to have_content('successfully rsvp\'ed')
   end
 end

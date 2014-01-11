@@ -8,7 +8,9 @@
 	<% @events.each do |event| %>
 		<p>
 		<%= event.title %>
-		<%= link_to 'rsvp', new_rsvp_path %>
+		<%= form_for [event,@rsvp] do |f| %>
+			<% f.submit 'rsvp' %>
+		<% end %> 
 		</p>
 	<% end %>
 <% end %>
