@@ -12,8 +12,18 @@
   </head>
 
   <body>
-
+    <nav class="top-bar" data-topbar>
+      <ul class="title-area">
+        <li class="name">
+          <!-- <h1><a href="#">My Site</a></h1> -->
+          <h1><%= link_to "PartyStarter", root_path %></h1>
+        </li>
+        <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+      </ul>
+    </nav>
+      
     <%= yield %>
     <%= javascript_include_tag "application" %>
+  
   </body>
 </html>
