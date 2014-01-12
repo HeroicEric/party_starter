@@ -1,0 +1,10 @@
+<h1>Party Starter</h1>
+
+{{#link-to 'events.new'}}Start a Party{{/link-to}}
+
+<h2>Parties</h2>
+
+{{#each controller}}
+  <h3>{{title}}</h3>
+  <span>RSVP</span>
+{{/each}}

@@ -3,10 +3,16 @@ PartyStarter::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'pages#home'
-   resources :events
-   resources :rsvps
+  root 'pages#home'
+  resources :events
+  resources :rsvps
 
+  namespace :api do
+    namespace :v1 do
+      resources :events, only: [:index, :create]
+      resources :locations, only: [:index, :create]
+    end
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
