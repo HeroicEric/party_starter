@@ -9,6 +9,9 @@ gem "jquery-rails"
 gem "turbolinks"
 gem "jbuilder", "~> 1.2"
 gem "simple_form"
+gem 'omniauth-facebook'
+gem "foundation-rails"
+gem "foundation_rails_helper"
 
 gem "ember-appkit-rails"
 
@@ -27,4 +30,6 @@ group :development, :test do
   gem "valid_attribute"
   gem "capybara"
   gem "quiet_assets"
+  gem "launchy"
+  gem "dotenv-rails"
 end

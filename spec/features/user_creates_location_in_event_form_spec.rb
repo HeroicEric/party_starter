@@ -18,15 +18,17 @@ feature 'users can create locations from event form', %Q{
   	fill_in "Name", with: "Mission Control"
   	fill_in "Street Address", with: "33 Harrison St"
   	fill_in "City", with: "Boston"
-  	fill_in "State", with: "MA"
+  	 select 'Massachusetts', from: 'State'
   	fill_in "Zip Code", with: "02108"
-  	click_button("Submit")
+  	click_button("Create Location")
   	expect(page).to have_content('Location was successfully added.')
   end
   
   scenario 'user inputs invalid location info' do
   	visit new_location_path
-  	click_button("Submit")
-  	expect(page).to have_content("can't be blank")
+  	click_button("Create Location")
+
+  	expect(page).to have_content("Something went wrong!")
+  	
   end
 end
