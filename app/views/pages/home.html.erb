@@ -8,6 +8,10 @@
 	<% @events.each do |event| %>
 		<p>
 		<%= event.title %>
+		<br>
+		<%= event.location.name %>
+		<br>
+		<%= event.when %>
 		<%= form_for [event,@rsvp] do |f| %>
 			<% f.submit 'rsvp' %>
 		<% end %> 
