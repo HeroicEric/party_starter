@@ -1,5 +1,7 @@
 class EventSerializer < ActiveModel::Serializer
   embed :id
 
-  attributes :id, :title, :location, :theme, :rsvp_min
+  has_one :location
+
+  attributes :id, :title, :theme, :rsvp_min, :when
 end

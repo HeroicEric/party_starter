@@ -18,8 +18,8 @@ PartyStarter::Application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :events, only: [:index, :create]
-      resources :locations, only: [:index, :create]
+      resources :events, only: [:index, :show, :create]
+      resources :locations, only: [:index, :show, :create]
     end
   end
 

@@ -3,5 +3,6 @@ export default DS.Model.extend({
 
   title: DS.attr('string'),
   theme: DS.attr('string'),
-  rsvpMin: DS.attr('number')
+  rsvpMin: DS.attr('number'),
+  when: DS.attr('string')
 });

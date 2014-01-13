@@ -5,6 +5,10 @@ class Api::V1::LocationsController < ApplicationController
     respond_with Location.limit(15)
   end
 
+  def show
+    respond_with Location.find(params[:id])
+  end
+
   def create
     location = Location.create(location_params)
 

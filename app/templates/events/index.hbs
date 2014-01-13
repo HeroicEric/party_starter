@@ -4,7 +4,7 @@
 
 <h2>Parties</h2>
 
-{{#each controller}}
-  <h3>{{title}}</h3>
+{{#each event in controller}}
+  <h3>{{#link-to 'events.show' event}}{{event.title}}{{/link-to}}</h3>
   <span>RSVP</span>
 {{/each}}

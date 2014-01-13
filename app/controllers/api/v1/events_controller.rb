@@ -5,6 +5,10 @@ class Api::V1::EventsController < ApplicationController
     respond_with Event.limit(15)
   end
 
+  def show
+    respond_with Event.find(params[:id])
+  end
+
   def create
     event = Event.create(event_params)
 
